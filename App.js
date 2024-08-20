@@ -102,7 +102,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   statusbarAndro: {
-    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+    paddingTop: Platform.select({ android: (StatusBar.currentHeight = 0) }),
   },
   backgroundImage: {
     opacity: 0.55,
